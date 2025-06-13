@@ -1,6 +1,8 @@
+@charset "UTF-8";
 * {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+  outline: 0;
 }
 
 html body .open-button {
@@ -8,26 +10,47 @@ html body .open-button {
   color: white;
   padding: 16px 20px;
   cursor: pointer;
-  opacity: 0.8%;
+  opacity: 0.8;
   position: fixed;
   bottom: 23px;
   right: 28px;
   width: 280px;
 }
-html body .open-button .form-container {
+html body .chat-popup {
+  z-index: 99999999999;
+  /*나중에 할 때는 순서를 맞춰주는 것이 좋으나 헤더와 푸터는 이수치가 좋다*/
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  display: none;
+}
+html body .chat-popup .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
-html body .open-button .form-container textarea {
+html body .chat-popup .form-container textarea {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
-  resize: none;
+  background: #f1f1f1; /*엄청 옅은 회색*/
 }
-html body .open-button .form-container .btn {
-  background-color: #04aa6d;
+html body .chat-popup .form-container .btn {
+  background-color: #8eccb5;
+  color: black;
+  padding: 16px 20px;
   border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+html body .chat-popup .form-container .cancel {
+  background-color: rgb(226, 66, 66) !important;
+  color: white;
+}
+html body .chat-popup .form-container .btn:hover, html body .chat-popup .form-container .open-button:hover {
+  opacity: 1;
 }/*# sourceMappingURL=chat.css.map */
