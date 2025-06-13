@@ -26,7 +26,11 @@ html {
                     background: #f1f1f1;
                     resize: none;
                 }
-                .btn{background-color: #04aa6d;}
+                .btn{
+                    background-color: #04aa6d;
+                    border: none;
+                    
+                }
               }
         }
     }
